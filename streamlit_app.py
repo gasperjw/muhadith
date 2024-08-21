@@ -43,19 +43,26 @@ st.title('Hadith Scholars Map')
 st.sidebar.title('Filter Scholars')
 
 # Scholar Selection Dropdown
-scholar_name = st.sidebar.selectbox("Select a Scholar", options=["All Scholars"] + list(data['Name']))
+scholar_name = st.sidebar.selectbox("Select a Scholar", options=["All Scholars"] + list(data['Name'].unique()))
+
+# Location Selection Dropdown
+location = st.sidebar.selectbox("Select a Location (Residence)", options=["All Locations"] + list(data['Residence'].unique()))
 
 # Filter based on a year range using a slider
 min_year = int(data['BornYear'].min())
 max_year = int(data['BornYear'].max())
 year_range = st.sidebar.slider('Select the Born Year Range (AH)', min_year, max_year, (min_year, max_year))
 
-# Filter data based on the selected range
+# Filter data based on the selected year range
 filtered_data = data[(data['BornYear'] >= year_range[0]) & (data['BornYear'] <= year_range[1])]
 
 # Apply scholar selection filter if a specific scholar is selected
 if scholar_name != "All Scholars":
     filtered_data = filtered_data[filtered_data['Name'] == scholar_name]
+
+# Apply location filter if a specific location is selected
+if location != "All Locations":
+    filtered_data = filtered_data[filtered_data['Residence'] == location]
 
 # Set up the folium map
 m = folium.Map(location=[30, 40], zoom_start=4)
@@ -88,7 +95,6 @@ for idx, row in filtered_data.iterrows():
 
 # Display the map in Streamlit app
 st_folium(m, width=700, height=500)
-
 
 # import streamlit as st
 # import pandas as pd
