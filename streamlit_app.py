@@ -10,9 +10,12 @@ data = pd.read_csv(data_path)
 
 # Function to extract the earliest year from the "Date (AH)" column
 def extract_year(date_ah):
-    # Handle entries like "c. 19-103" or just "33-110" by splitting and taking the first year
-    date_parts = date_ah.replace("c.", "").replace("d.", "").split('-')
-    return int(date_parts[0].strip()) if len(date_parts) > 0 else None
+    try:
+        # Handle entries like "c. 19-103" or just "33-110" by splitting and taking the first year
+        date_parts = date_ah.replace("c.", "").replace("d.", "").replace("p.", "").split('-')
+        return int(date_parts[0].strip()) if len(date_parts) > 0 else None
+    except ValueError:
+        return None  # Return None if the date is not a valid integer
 
 # Apply the extraction to the "Date (AH)" column and store it in a new column "BornYear"
 data['BornYear'] = data['Date (AH)'].apply(extract_year)
