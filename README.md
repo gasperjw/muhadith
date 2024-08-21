@@ -1,5 +1,5 @@
 
-### Description:
+# Hadith Map:
 
 This interactive map showcases the major **Muhaddithūn** (scholars of Hadith) across different regions and time periods in Islamic history. Each marker represents a scholar, indicating their place of residence, their known works, and the year they were born (in the Islamic calendar). 
 
