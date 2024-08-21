@@ -4,7 +4,7 @@ import folium
 from folium.plugins import MarkerCluster
 from streamlit_folium import st_folium
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm  # Import color map from matplotlib
+import matplotlib.cm as cm
 
 # Load the dataset
 data_path = 'Hadith Scholars - Sheet1.csv'  # Path to your CSV file
@@ -22,9 +22,20 @@ def extract_year(date_ah):
 # Apply the extraction to the "Date (AH)" column and store it in a new column "BornYear"
 data['BornYear'] = data['Date (AH)'].apply(extract_year)
 
-# Normalize the years for color grading
-min_year = data['BornYear'].min()
-max_year = data['BornYear'].max()
+# Remove rows with missing years
+data = data.dropna(subset=['BornYear'])
+
+# Set up Streamlit app layout
+st.title('Hadith Scholars Map')
+st.sidebar.title('Filter Scholars by Born Year')
+
+# Filter based on a year range using a slider
+min_year = int(data['BornYear'].min())
+max_year = int(data['BornYear'].max())
+year_range = st.sidebar.slider('Select the Born Year Range (AH)', min_year, max_year, (min_year, max_year))
+
+# Filter data based on the selected range
+filtered_data = data[(data['BornYear'] >= year_range[0]) & (data['BornYear'] <= year_range[1])]
 
 # Set up the folium map
 m = folium.Map(location=[30, 40], zoom_start=4)
@@ -33,18 +44,24 @@ m = folium.Map(location=[30, 40], zoom_start=4)
 marker_cluster = MarkerCluster().add_to(m)
 
 # Add points to the map
-for idx, row in data.iterrows():
-    # Determine color based on BornYear (normalized between min_year and max_year)
-    if pd.notnull(row['BornYear']):
-        normalized_year = (row['BornYear'] - min_year) / (max_year - min_year)
-        color = cm.viridis(normalized_year)  # Use the correct colormap from matplotlib
+for idx, row in filtered_data.iterrows():
+    # Normalize the year for color grading
+    normalized_year = (row['BornYear'] - min_year) / (max_year - min_year)
+    
+    # Use a colormap for better contrast (e.g., viridis)
+    color = cm.viridis(normalized_year)
 
-        folium.Marker(
-            location=[row['Latitude'], row['Longitude']],
-            popup=f"<b>Name:</b> {row['Name']}<br><b>Work:</b> {row['Work']}<br><b>Born Year (AH):</b> {row['BornYear']}<br><b>Residence:</b> {row['Residence']}",
-            icon=folium.Icon(color='blue' if normalized_year < 0.5 else 'green')
-        ).add_to(marker_cluster)
+    # Create markers with a popup showing detailed information
+    folium.Marker(
+        location=[row['Latitude'], row['Longitude']],
+        popup=(
+            f"<b>Name:</b> {row['Name']}<br>"
+            f"<b>Work:</b> {row['Work']}<br>"
+            f"<b>Born Year (AH):</b> {row['BornYear']}<br>"
+            f"<b>Residence:</b> {row['Residence']}"
+        ),
+        icon=folium.Icon(color='blue' if normalized_year < 0.5 else 'green')
+    ).add_to(marker_cluster)
 
-# Display the map in the Streamlit app
-st.title('Hadith Scholars Map')
+# Display the map in Streamlit app
 st_folium(m, width=700, height=500)
