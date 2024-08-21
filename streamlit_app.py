@@ -29,6 +29,18 @@ data = data.dropna(subset=['BornYear'])
 st.title('Hadith Scholars Map')
 st.sidebar.title('Filter Scholars by Born Year')
 
+with st.expander("About this map"):
+    st.write("""
+    This interactive map showcases the major **Muhaddithūn** (scholars of Hadith) across different regions 
+    and time periods in Islamic history. Each marker represents a scholar, indicating their place of residence, 
+    their known works, and the year they were born (in the Islamic calendar).
+
+    **Filter Scholars**: Use the slider in the sidebar to filter scholars based on their birth year (AH). 
+    Click on any marker to learn more about the scholar, including their name, works, born year, and residence.
+
+    The map clusters close markers together, but you can zoom in to view individual scholars and interact with each marker.
+    """)
+
 # Filter based on a year range using a slider
 min_year = int(data['BornYear'].min())
 max_year = int(data['BornYear'].max())
