@@ -3,6 +3,8 @@ import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
 from streamlit_folium import st_folium
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm  # Import color map from matplotlib
 
 # Load the dataset
 data_path = 'Hadith Scholars - Sheet1.csv'  # Path to your CSV file
@@ -33,16 +35,16 @@ marker_cluster = MarkerCluster().add_to(m)
 # Add points to the map
 for idx, row in data.iterrows():
     # Determine color based on BornYear (normalized between min_year and max_year)
-    normalized_year = (row['BornYear'] - min_year) / (max_year - min_year)
-    color = plt.cm.viridis(normalized_year)
+    if pd.notnull(row['BornYear']):
+        normalized_year = (row['BornYear'] - min_year) / (max_year - min_year)
+        color = cm.viridis(normalized_year)  # Use the correct colormap from matplotlib
 
-    folium.Marker(
-        location=[row['Latitude'], row['Longitude']],
-        popup=f"<b>Name:</b> {row['Name']}<br><b>Work:</b> {row['Work']}<br><b>Born Year (AH):</b> {row['BornYear']}<br><b>Residence:</b> {row['Residence']}",
-        icon=folium.Icon(color='blue' if normalized_year < 0.5 else 'green')
-    ).add_to(marker_cluster)
+        folium.Marker(
+            location=[row['Latitude'], row['Longitude']],
+            popup=f"<b>Name:</b> {row['Name']}<br><b>Work:</b> {row['Work']}<br><b>Born Year (AH):</b> {row['BornYear']}<br><b>Residence:</b> {row['Residence']}",
+            icon=folium.Icon(color='blue' if normalized_year < 0.5 else 'green')
+        ).add_to(marker_cluster)
 
 # Display the map in the Streamlit app
 st.title('Hadith Scholars Map')
 st_folium(m, width=700, height=500)
-
