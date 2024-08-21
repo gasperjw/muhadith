@@ -1,19 +1,14 @@
-# 🎈 Blank app template
 
-A simple Streamlit app template for you to modify!
+### Description:
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+This interactive map showcases the major **Muhaddithūn** (scholars of Hadith) across different regions and time periods in Islamic history. Each marker represents a scholar, indicating their place of residence, their known works, and the year they were born (in the Islamic calendar). 
 
-### How to run it on your own machine
+You can filter the scholars by adjusting the **Born Year (AH)** range using the slider on the left sidebar. This feature allows you to explore scholars from different centuries and understand their geographical distribution. 
 
-1. Install the requirements
+Click on any marker to learn more about the scholar, including:
+- Name
+- Major works
+- Born year
+- Residence
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+The map automatically groups close markers into clusters, but you can zoom in to view and interact with individual markers.
