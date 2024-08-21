@@ -1,31 +1,53 @@
 No.,Name,Work,Date (AH),Residence,Latitude,Longitude
-1,Āmir ibn Sharāhīl al-Sha‘bī,Kitāb al-Talāq,c. 19-103,"Kufa, Iraq",32.6249,44.0343
-2,Muhammad ibn Sīrīn,,33-110,"Basra, Iraq",30.5186,47.7904
-3,Muhammad ibn Shihāb al-Zuhrī,Al-Maghāzī al-Nabawiyyah,c. 50-124,"Medina, Hijaz (now Saudi Arabia)",24.5347,39.5792
-4,Abd al-Malik Ibn Jurayj,Al-Musnad li Ibn Jrayj,80-150,"Mecca, Hijaz (now Saudi Arabia)",21.4325,39.8362
-5,Ma‘mar ibn Rāshid,Al-Jāmi‘ li Ma‘mar ibn Rāshid,95-153,"Basra, Iraq",30.5186,47.7904
-6,Shu’bah ibn al-Hajjāj,,82-160,"Basra, Iraq",30.4986,47.7604
-7,Sufyān al-Thawrī,Al-Jāmi‘ li Sufyān al-Thawrī,97-161,"Kufa, Iraq",32.6049,44.0143
-8,Mālik ibn Anas,Al-Muwatta’,93-179,"Medina, Hijaz (now Saudi Arabia)",24.5147,39.5592
-9,Abd Allāh ibn al-Mubārak,Kitāb al-Zuhd,118-181,"Marv, Khorasan (now Turkmenistan)",37.67,61.84
-10,Wakī‘ ibn al-Jarrāh,Kitāb al-Zuhd,129-197,"Kufa, Iraq",32.6049,44.0143
-11,Sufyān ibn ‘Uyaynah,Al-Jāmi‘ li Sufyān ibn ‘Uyaynah,107-198,"Mecca, Hijaz (now Saudi Arabia)",21.4125,39.8162
-12,Yahyā ibn Sa‘īd al-Qattān,,120-198,"Basra, Iraq",30.4886,47.7504
-13,Abd al-Rahmān ibn Mahdī,,135-198,"Basra, Iraq",30.4986,47.7404
-14,Abū Dāwūd al-Tayālisī,Musnad Abī Dāwūd al-Tayālisī,133-204,"Basra, Iraq",30.5286,47.7704
-15,Abd al-Razzāq ibn Hammām,Musannaf Abd al-Razzāq,126-211,"Sanaa, Yemen",15.3794,44.201
-16,Abd Allāh ibn al-Zubayr al-Humaydī,Musnad al-Humaydī,d. 219,"Mecca, Hijaz (now Saudi Arabia)",21.4325,39.8362
-17,Abū ‘Ubayd al-Qāsim ibn Sallām,Kitāb al-Amwāl/al-Gharīb al-Musannaf,157-224,"Mecca, Hijaz (now Saudi Arabia)",21.4425,39.8462
-18,Muhammad ibn Sa‘d,Al-Tabaqāt al-Kabīr,168-230,"Baghdad, Iraq",33.3252,44.3761
-19,Yahyā ibn Ma‘īn,Al-Tārīkh wa al-‘Ilal,158-233,"Baghdad, Iraq",33.3052,44.3561
-20,Alī ibn al-Madīnī,Al-‘Ilal/al-Asāmī wa al-Kunā,161-234,"Baghdad, Iraq",33.3352,44.3861
-21,Abū Bakr ibn Abī Shaybah,Musannaf Ibn Abī Shaybah,159-235,"Kufa, Iraq",32.5949,44.0043
-22,Ishāq ibn Rahwayh,Musnad Ishāq ibn Rahway,161-238,"Nishapur, Iran",36.2247,58.8061
-23,Ahmad ibn Hanbal,Musnad Ahmad/Kitāb al-Zuhd,164-241,"Baghdad, Iraq",33.2952,44.3461
-24,Abd Allāh al-Dārimī,Sunan al-Dārimī,181-255,"Samarqand, Uzbekistan",39.6426,66.964
 25,Muhammad ibn Ismā‘īl al-Bukhārī,Al-Jāmi‘ al-Musnad al-Sahīh,194-256,"Bukhara, Uzbekistan",39.764,64.4181
-26,Muhammad ibn Yahyā al-Dhuhlī,Al-Zuhriyyāt,172-258,"Nishapur, Iran",36.2347,58.7861
-27,Muslim ibn al-Hajjāj,Al-Musnad al-Sahīh/Kitāb al-Tamyīz,204-261,"Nishapur, Iran",36.1947,58.7761
-28,Abū Zur‘ah al-Rāzī,Asmā’ al-Du‘afā’,200-264,"Ray, Iran",35.6316,51.4186
+24,Abd Allāh al-Dārimī,Sunan al-Dārimī,181-255,"Samarqand, Uzbekistan",39.6426,66.964
+35,Ahmad ibn Shu‘ayb al-Nasa’ī,Al-Mujtabā/al-Sunan al-Kubrā,215-303,"Nasa, Turkmenistan",37.9768,58.3606
+31,Baqī ibn Makhlad al-Andalusī,Musnad Baqī ibn Makhlad,201-276,"Cordoba, Spain",37.8882,-4.7794
+9,Abd Allāh ibn al-Mubārak,Kitāb al-Zuhd,118-181,"Marv, Khorasan (now Turkmenistan)",37.67,61.84
+33,Abū ‘Īsā al-Tirmidhī,Al-Jāmi‘ al-Kabīr/al-Shamā’il,209-279,"Termez, Uzbekistan",37.4248,67.2783
+40,Abū ‘Awānah al-Isfarā’īnī,Mustakhraj Abī ‘Awānah,p. 230-316,"Isfarain, Iran",37.0594,57.5075
+36,Abū Ya‘lā al-Mawsilī,Musnad Abī Ya‘lā,210-307,"Mosul, Iraq",36.334,43.1189
 29,Abū ‘Abd Allāh Muhammad Ibn Mājah,Sunan Ibn Mājah,209-273,"Qazvin, Iran",36.2788,50.0141
+26,Muhammad ibn Yahyā al-Dhuhlī,Al-Zuhriyyāt,172-258,"Nishapur, Iran",36.2347,58.7861
+22,Ishāq ibn Rahwayh,Musnad Ishāq ibn Rahway,161-238,"Nishapur, Iran",36.3247,58.8061
+39,Abū Bakr Ibn Khuzaymah,Sahīh Ibn Khuzaymah,223-311,"Nishapur, Iran",36.2147,58.7961
+51,Abū Bakr al-Ismā‘īlī,Al-Mustakhraj ‘alā Sahīh al-Bukhārī,277-371,"Nishapur, Iran",36.2347,58.7961
+52,Abū Ahmad al-Hākim al-Kabīr,Al-‘Ilal/al-Asmā’ wa al-Kunā,285-378,"Nishapur, Iran",36.2147,58.7961
+27,Muslim ibn al-Hajjāj,Al-Musnad al-Sahīh/Kitāb al-Tamyīz,204-261,"Nishapur, Iran",36.1947,58.7761
+32,Abū Hātim al-Razī,Tabaqāt al-Tābi‘īn,195-277,"Ray, Iran",35.9216,51.4286
+49,Abū Ahmad Ibn ‘Adī,Al-Kāmil fī Ma‘rifat al-Du‘afā’,277-365,"Ray, Iran",35.7216,51.4286
+28,Abū Zur‘ah al-Rāzī,Asmā’ al-Du‘afā’,200-264,"Ray, Iran",35.6316,51.4186
+43,Abd al-Rahmān ibn Abī Hātim al-Rāzī,Al-Jarh wa al-Ta‘dīl/‘Ilal al-Hadīth,240-327,"Ray, Iran",35.6216,51.4286
+47,Abū Bakr al-Ājurrī,Al-Sharī‘ah fi al-Sunnah,280-360,"Baghdad, Iraq",33.3952,44.3661
+20,Alī ibn al-Madīnī,Al-‘Ilal/al-Asāmī wa al-Kunā,161-234,"Baghdad, Iraq",33.3352,44.3861
+38,Abū Ja‘far Ibn Jarīr al-Tabarī,Tahdhīb al-Āthār wa al-Sunan,224-310,"Baghdad, Iraq",33.3352,44.3661
+18,Muhammad ibn Sa‘d,Al-Tabaqāt al-Kabīr,168-230,"Baghdad, Iraq",33.3252,44.3761
+37,Abū Bishr al-Dūlābī,Al-Asmā’ wa al-Kunā,224-310,"Baghdad, Iraq",33.3152,44.3661
+19,Yahyā ibn Ma‘īn,Al-Tārīkh wa al-‘Ilal,158-233,"Baghdad, Iraq",33.3052,44.3561
+23,Ahmad ibn Hanbal,Musnad Ahmad/Kitāb al-Zuhd,164-241,"Baghdad, Iraq",33.2952,44.3461
+46,Abu al-Qāsim Sulaymān al-Tabarāni,Al-Mu‘jam al-Kabīr/al-Awsat/al-Saghīr,260-360,"Tiberias, Palestine",32.7959,35.5309
+50,Abū al-Shaykh Ibn Hayyān,Kitāb al-‘Ażamah/Kitāb al-Sunnah,274-369,"Isfahan, Iran",32.6546,51.668
+1,Āmir ibn Sharāhīl al-Sha‘bī,Kitāb al-Talāq,c. 19-103,"Kufa, Iraq",32.6249,44.0343
+10,Wakī‘ ibn al-Jarrāh,Kitāb al-Zuhd,129-197,"Kufa, Iraq",32.6049,44.0143
+21,Abū Bakr ibn Abī Shaybah,Musannaf Ibn Abī Shaybah,159-235,"Kufa, Iraq",32.5949,44.0043
+7,Sufyān al-Thawrī,Al-Jāmi‘ li Sufyān al-Thawrī,97-161,"Kufa, Iraq",32.5049,44.0143
+45,Abū Hātim Ibn Hibbān al-Bustī,Al-Taqāsīm wa al-Anwā‘/al-Thiqāt,270-354,"Bust, Afghanistan",31.9713,64.1746
+48,Hasan ibn ‘Abd al-Rahmān al-Rāmahurmuzī,Al-Muhaddith al-Fāsil,c. 265-360,"Ramhormoz, Iran",31.2744,49.6042
+44,Abū ‘Alī Ibn al-Sakan,Al-Sahīh al-Muntaqā,294-353,"Alexandria, Egypt",31.2001,29.9187
+5,Ma‘mar ibn Rāshid,Al-Jāmi‘ li Ma‘mar ibn Rāshid,95-153,"Basra, Iraq",30.5386,47.7904
+14,Abū Dāwūd al-Tayālisī,Musnad Abī Dāwūd al-Tayālisī,133-204,"Basra, Iraq",30.5286,47.7704
+34,Abū Bakr al-Bazzār,Al-Bahr al-Zakhkhār,210-292,"Basra, Iraq",30.5086,47.7804
+2,Muhammad ibn Sīrīn,,33-110,"Basra, Iraq",30.4986,47.7904
+6,Shu’bah ibn al-Hajjāj,,82-160,"Basra, Iraq",30.4986,47.7604
+12,Yahyā ibn Sa‘īd al-Qattān,,120-198,"Basra, Iraq",30.4786,47.7504
+13,Abd al-Rahmān ibn Mahdī,,135-198,"Basra, Iraq",30.4686,47.7404
 30,Abū Dāwūd Sulaymān ibn al-Ash‘ath,Sunan Abī Dāwūd/al-Marāsīl,202-275,"Sijistan, Iran",30.1356,61.7822
+41,Abū Ja‘far Ahmad al-Tahāwī,Sharh Ma‘ānī al-Āthār,239-321,Egypt,26.8206,30.8025
+3,Muhammad ibn Shihāb al-Zuhrī,Al-Maghāzī al-Nabawiyyah,c. 50-124,"Medina, Hijaz (now Saudi Arabia)",24.5347,39.5792
+8,Mālik ibn Anas,Al-Muwatta’,93-179,"Medina, Hijaz (now Saudi Arabia)",24.5147,39.5592
+17,Abū ‘Ubayd al-Qāsim ibn Sallām,Kitāb al-Amwāl/al-Gharīb al-Musannaf,157-224,"Mecca, Hijaz (now Saudi Arabia)",21.4425,39.8462
+4,Abd al-Malik Ibn Jurayj,Al-Musnad li Ibn Jrayj,80-150,"Mecca, Hijaz (now Saudi Arabia)",21.4325,39.8362
+16,Abd Allāh ibn al-Zubayr al-Humaydī,Musnad al-Humaydī,d. 219,"Mecca, Hijaz (now Saudi Arabia)",21.4325,39.8362
+42,Muhammad ibn ‘Amr al-‘Uqaylī,A-Du‘afā’ wa al-Matrūkūn,d. 322,"Mecca, Hijaz (now Saudi Arabia)",21.4225,39.8262
+11,Sufyān ibn ‘Uyaynah,Al-Jāmi‘ li Sufyān ibn ‘Uyaynah,107-198,"Mecca, Hijaz (now Saudi Arabia)",21.4125,39.8162
+15,Abd al-Razzāq ibn Hammām,Musannaf Abd al-Razzāq,126-211,"Sanaa, Yemen",15.3794,44.201
