@@ -26,28 +26,38 @@ data['BornYear'] = data['Date (AH)'].apply(extract_year)
 # Remove rows with missing years
 data = data.dropna(subset=['BornYear'])
 
+
+
+# Set up Streamlit app layout
+st.title('Muhaddithūn and Fuqahā Scholars Map')
+st.sidebar.title('Filter Scholars')
+
 # Add a collapsible section for the description
 with st.expander("About this map"):
     st.write("""
-    This interactive map showcases the major **Muhaddithūn** (scholars of Hadith) across different regions 
-    and time periods in Islamic history. Each marker represents a scholar, indicating their place of residence, 
+    This interactive map showcases the major **Muhaddithūn** (scholars of Hadith) and **Fuqahā’** (Islamic jurists) 
+    across different regions and time periods in Islamic history. Each marker represents a scholar, indicating their place of residence, 
     their known works, and the year they were born (in the Islamic calendar).
 
-    **Filter Scholars**: Use the slider in the sidebar to filter scholars based on their birth year (AH). 
-    Click on any marker to learn more about the scholar, including their name, works, born year, and residence.
+    **Filter Scholars**: Use the options in the sidebar to filter scholars based on their field of study (Hadith or Fiqh), 
+    name, location, and birth year (AH). Click on any marker to learn more about the scholar, including their name, works, born year, and residence.
 
     The map clusters close markers together, but you can zoom in to view individual scholars and interact with each marker.
     """)
 
-# Set up Streamlit app layout
-st.title('Hadith Scholars Map')
-st.sidebar.title('Filter Scholars')
 
 # Scholar Selection Dropdown
 scholar_name = st.sidebar.selectbox("Select a Scholar", options=["All Scholars"] + list(data['Name'].unique()))
 
 # Location Selection Dropdown
 location = st.sidebar.selectbox("Select a Location (Residence)", options=["All Locations"] + list(data['Residence'].unique()))
+
+# Scholar Selection Dropdown
+scholar_name = st.sidebar.selectbox("Select a Scholar", options=["All Scholars"] + list(data['Name'].unique()))
+
+# Study Selection Dropdown
+study = st.sidebar.selectbox("Select a Study", options=["All Studies"] + list(data['Famous For'].unique()))
+
 
 # Filter based on a year range using a slider
 min_year = int(data['BornYear'].min())
@@ -64,6 +74,9 @@ if scholar_name != "All Scholars":
 # Apply location filter if a specific location is selected
 if location != "All Locations":
     filtered_data = filtered_data[filtered_data['Residence'] == location]
+
+if location != "All Studies":
+    filtered_data = filtered_data[filtered_data['Famous For'] == study]
 
 # Set up the folium map
 m = folium.Map(location=[30, 40], zoom_start=4)
