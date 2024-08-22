@@ -74,7 +74,7 @@ marker_cluster = MarkerCluster(
     maxClusterRadius=30          # Make the clustering more sensitive to distance
 ).add_to(m)
 
-cmap = cm.get_cmap('Greens')
+cmap = cm.get_cmap('viridis')
 
 for idx, row in filtered_data.iterrows():
     # Normalize the year for color grading
