@@ -71,7 +71,7 @@ m = folium.Map(location=[30, 40], zoom_start=4)
 # Add a marker cluster with options to disable clustering at higher zoom levels
 marker_cluster = MarkerCluster(
     disableClusteringAtZoom=10,  # Disable clustering at zoom levels above 10
-    maxClusterRadius=30          # Make the clustering more sensitive to distance
+    maxClusterRadius=10          # Make the clustering more sensitive to distance
 ).add_to(m)
 
 cmap = cm.get_cmap('viridis')
