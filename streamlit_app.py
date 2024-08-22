@@ -52,12 +52,8 @@ scholar_name = st.sidebar.selectbox("Select a Scholar", options=["All Scholars"]
 # Location Selection Dropdown
 location = st.sidebar.selectbox("Select a Location (Residence)", options=["All Locations"] + list(data['Residence'].unique()))
 
-# Scholar Selection Dropdown
-scholar_name = st.sidebar.selectbox("Select a Scholar", options=["All Scholars"] + list(data['Name'].unique()))
-
 # Study Selection Dropdown
 study = st.sidebar.selectbox("Select a Study", options=["All Studies"] + list(data['Famous For'].unique()))
-
 
 # Filter based on a year range using a slider
 min_year = int(data['BornYear'].min())
@@ -75,7 +71,8 @@ if scholar_name != "All Scholars":
 if location != "All Locations":
     filtered_data = filtered_data[filtered_data['Residence'] == location]
 
-if location != "All Studies":
+# Apply study filter if a specific study is selected
+if study != "All Studies":
     filtered_data = filtered_data[filtered_data['Famous For'] == study]
 
 # Set up the folium map
