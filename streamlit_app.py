@@ -8,7 +8,7 @@ import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 
 # Load the dataset
-data_path = 'Hadith Scholars - Sheet1.csv'  # Path to your CSV file
+data_path = 'Fiqh and Hadith Scholars.csv'  # Path to your CSV file
 data = pd.read_csv(data_path)
 
 # Function to extract the earliest year from the "Date (AH)" column
