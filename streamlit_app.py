@@ -120,25 +120,25 @@ elif page == "Muhaddithūn and Fuqahā Map":
     m = folium.Map(location=[30, 40], zoom_start=4)
 
 
-    tiles = "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
-    attr = (
-        '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> '
-        '&copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> '
-        '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> '
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    )
+    # tiles = "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
+    # attr = (
+    #     '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> '
+    #     '&copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> '
+    #     '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> '
+    #     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    # )
 
-    # Define map location, zoom level, and min/max zoom
-    lat, lon = 41, 29
-    zoom_start = 10
-    min_zoom = 1
-    max_zoom = 16
+    # # Define map location, zoom level, and min/max zoom
+    # lat, lon = 41, 29
+    # zoom_start = 10
+    # min_zoom = 1
+    # max_zoom = 16
 
-    # Create the map with custom tile layer, zoom limits, and attribution
-    m = folium.Map(location=[lat, lon], zoom_start=zoom_start, tiles=None, min_zoom=min_zoom, max_zoom=max_zoom)
+    # # Create the map with custom tile layer, zoom limits, and attribution
+    # m = folium.Map(location=[lat, lon], zoom_start=zoom_start, tiles=None, min_zoom=min_zoom, max_zoom=max_zoom)
 
-    # Add the custom tile layer
-    folium.TileLayer(tiles=tiles, attr=attr, name="Stadia Stamen Watercolor", min_zoom=min_zoom, max_zoom=max_zoom).add_to(m)
+    # # Add the custom tile layer
+    # folium.TileLayer(tiles=tiles, attr=attr, name="Stadia Stamen Watercolor", min_zoom=min_zoom, max_zoom=max_zoom).add_to(m)
 
     # Add a marker cluster
     marker_cluster = MarkerCluster(disableClusteringAtZoom=10, maxClusterRadius=10).add_to(m)
