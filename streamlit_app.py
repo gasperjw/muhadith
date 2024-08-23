@@ -38,8 +38,8 @@ if page == "Home":
         This platform helps to visualize the rich academic history of the Islamic world, bringing to life the journeys of 
         scholars who shaped Islamic law and thought over centuries.
         """)
-    if st.button("Scholar Journey"):
-        st.switch_page("scholar_journey.py")
+    # if st.button("Scholar Journey"):
+    #     st.switch_page("scholar_journey.py")
 
 
 
