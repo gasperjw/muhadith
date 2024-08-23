@@ -7,15 +7,6 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 
-import streamlit as st
-import pandas as pd
-import folium
-from folium.plugins import MarkerCluster
-from streamlit_folium import st_folium
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import matplotlib.colors as mcolors
-
 # Sidebar for navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Go to", ["Home", "Muhaddithūn and Fuqahā Map", "Journey of Scholars", "Contribute!"])
@@ -47,6 +38,8 @@ if page == "Home":
         This platform helps to visualize the rich academic history of the Islamic world, bringing to life the journeys of 
         scholars who shaped Islamic law and thought over centuries.
         """)
+    if st.button("Scholar Journey"):
+        st.switch_page("scholar_journey.py")
 
 
 
