@@ -23,6 +23,9 @@ if page == "Home":
     Islamic history, while also giving you the opportunity to contribute additional data.
     """)
 
+     # Add a message to direct users to use the sidebar for navigation
+    st.info("👉 **Use the sidebar on the left to navigate between different sections of this app.**")
+
     # Add an expander to provide more detailed explanation
     with st.expander("Learn More About This Project"):
         st.write("""
