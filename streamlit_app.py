@@ -23,8 +23,6 @@ if page == "Home":
     Islamic history, while also giving you the opportunity to contribute additional data.
     """)
 
-    st.title("📚 Scholars of Islam Project")
-
      # Add a message to direct users to use the sidebar for navigation
     st.info("👉 **Use the sidebar on the left to navigate between different sections of this app.**")
 
