@@ -113,7 +113,12 @@ elif page == "Muhaddithūn and Fuqahā Map":
         filtered_data = filtered_data[filtered_data['Famous For'] == study]
 
     # Set up the folium map
-    m = folium.Map(location=[30, 40], zoom_start=4)
+    # m = folium.Map(location=[30, 40], zoom_start=4)
+    m = folium.Map(
+    location=[30, 40]), zoom_start= 8,
+    tiles='https://watercolormaps.collection.cooperhewitt.org/tile/watercolor/{z}/{x}/{y}.jpg',
+    attr='Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.'
+    )
 
 
     # tiles = "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
