@@ -80,6 +80,7 @@ elif page == "Muhaddithūn and Fuqahā Map":
 
         The map clusters close markers together, but you can zoom in to view individual scholars and interact with each marker.
         """)
+    st.write("Hello")
 
     st.sidebar.title("Filters")
 
