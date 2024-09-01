@@ -41,6 +41,7 @@ if page == "Home":
         This platform helps to visualize the rich academic history of the Islamic world, bringing to life the journeys of 
         scholars who shaped Islamic law and thought over centuries.
         """)
+    st.write("Note: Information May Be Incorrect. Please email sameerahmed@utexas.edu for any corrections!")
     # if st.button("Scholar Journey"):
     #     st.switch_page("scholar_journey.py")
 
@@ -80,6 +81,8 @@ elif page == "Muhaddithūn and Fuqahā Map":
 
         The map clusters close markers together, but you can zoom in to view individual scholars and interact with each marker.
         """)
+        
+    st.info("👉 **Use the sidebar on the left to filter through different scholars.**")
 
     st.sidebar.title("Filters")
 
@@ -170,6 +173,7 @@ elif page == "Muhaddithūn and Fuqahā Map":
     st_folium(m, width=700, height=500)
 
     st.dataframe(data[['Name', 'Residence', 'Famous For', 'Work', 'BornYear']])
+    st.write("Note: Information May Be Incorrect. Please email sameerahmed@utexas.edu for any corrections!")
 
 
 
@@ -303,6 +307,9 @@ elif page == "Journey of Scholars":
                 # Display travel details inside the expander
                 st.write(f"**What They Learned**: {row['What They Learned']}")
                 st.write(f"**Teacher(s)**: {row['Teacher']}")
+
+    st.write("Note: Information May Be Incorrect. Please email sameerahmed@utexas.edu for any corrections!")
+
 
 elif page == "Contribute!":
     st.title("Contribute to Scholar and Travel Data")
